@@ -117,7 +117,37 @@
 
 
         </DockPanel>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="5" Margin="0,45,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
+        <Rectangle Fill="#FFF4F4F5" 
+                   HorizontalAlignment="Left" 
+                   Height="5" 
+                   Margin="0,45,0,0" 
+                   Stroke="White" 
+                   VerticalAlignment="Top" 
+                   Width="150"
+                   x:Name="rect_btn_windowssettings"
+                   />
+        
+        <Rectangle Fill="#FFF4F4F5" 
+                   HorizontalAlignment="Left" 
+                   Height="5" 
+                   Margin="151,45,0,0" 
+                   Stroke="White" 
+                   VerticalAlignment="Top" 
+                   Width="150"
+                   Visibility="Hidden"
+                   x:Name="rect_btn_install"
+                   />
+        
+        <Rectangle Fill="#FFF4F4F5" 
+                   HorizontalAlignment="Left" 
+                   Height="5" 
+                   Margin="634,45,0,0" 
+                   Stroke="White" 
+                   VerticalAlignment="Top" 
+                   Width="150"
+                   Visibility="Hidden"
+                   x:Name="rect_btn_settings"
+                   />
 
 
 
