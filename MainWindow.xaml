@@ -73,50 +73,58 @@
     <Grid>
 
         <DockPanel Height="50"
-               VerticalAlignment="Top"
-               Background="#131F26">
+                   VerticalAlignment="Top"
+                   Background="#131F26">
 
             <Button Content="Windows Einstellungen"
-                Width="150"
-                Background="#274659"
-                HorizontalAlignment="Left"
-                Height="50"
-                Foreground="White"
-                BorderBrush="Transparent"
-                x:Name="btn_winsettings" 
-                Style="{DynamicResource ButtonStyle}" 
-                Click="btn_winsettings_Click"
-             />
+                    Width="150"
+                    Background="#274659"
+                    HorizontalAlignment="Left"
+                    Height="50"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    x:Name="btn_winsettings" 
+                    Style="{DynamicResource ButtonStyle}" 
+                    Click="btn_winsettings_Click" 
+                    FontWeight="Light"
+                    FontFamily="Nirmala UI" 
+                    IsDefault="True"
+            />
 
-            <Button Content="Einstellungen" 
-                Width="150"
-                Background="Transparent"
-                HorizontalAlignment="Left"
-                Height="50"
-                Foreground="White"
-                BorderBrush="Transparent"
-                x:Name="btn_install"
-                Style="{DynamicResource ButtonStyle}"
-                Click="btn_install_Click"
+            <Button Content="Installieren" 
+                    Width="150"
+                    Background="Transparent"
+                    HorizontalAlignment="Left"
+                    Height="50"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    x:Name="btn_install"
+                    Style="{DynamicResource ButtonStyle}"
+                    Click="btn_install_Click"
+                    FontFamily="Nirmala UI"
                 
             />
 
             <Button Content="Einstellungen" 
-                Width="150"
-                Background="Transparent"
-                HorizontalAlignment="Right"
-                Height="50"
-                Foreground="White"
-                BorderBrush="Transparent"
-                x:Name="btn_settings"
-                Style="{DynamicResource ButtonStyle}"
-                Click="btn_settings_Click"
+                    Width="150"
+                    Background="Transparent"
+                    HorizontalAlignment="Right"
+                    Height="50"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    x:Name="btn_settings"
+                    Style="{DynamicResource ButtonStyle}"
+                    Click="btn_settings_Click"
+                    FontFamily="Nirmala UI"
                 
             />
+
 
 
 
         </DockPanel>
+
+
         <Rectangle Fill="#FFF4F4F5" 
                    HorizontalAlignment="Left" 
                    Height="5" 
@@ -125,8 +133,8 @@
                    VerticalAlignment="Top" 
                    Width="150"
                    x:Name="rect_btn_windowssettings"
-                   />
-        
+        />
+
         <Rectangle Fill="#FFF4F4F5" 
                    HorizontalAlignment="Left" 
                    Height="5" 
@@ -136,8 +144,8 @@
                    Width="150"
                    Visibility="Hidden"
                    x:Name="rect_btn_install"
-                   />
-        
+        />
+
         <Rectangle Fill="#FFF4F4F5" 
                    HorizontalAlignment="Left" 
                    Height="5" 
@@ -147,12 +155,8 @@
                    Width="150"
                    Visibility="Hidden"
                    x:Name="rect_btn_settings"
-                   />
-
-
-
+        />
+        <Frame Content="Frame" HorizontalAlignment="Left" Height="356" Margin="10,55,0,0" VerticalAlignment="Top" Width="774" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>
-
-
