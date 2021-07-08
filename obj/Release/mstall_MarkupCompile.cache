@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\Kilian\Source\Repos\mstall\obj\Debug\
+C:\Users\Kilian\Source\Repos\mstall\obj\Release\
 mstall
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Kilian\Source\Repos\mstall\App.xaml
 42061721242
 
-91749877756
+8-1702730173
 14-1102161686
 install.xaml;MainWindow.xaml;settings.xaml;winsettings.xaml;
 

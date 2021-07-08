@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:mstall"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="450" 
+        Height="500" 
         Width="800" 
         ResizeMode="CanMinimize"
         Background="#274659"
@@ -156,7 +156,16 @@
                    Visibility="Hidden"
                    x:Name="rect_btn_settings"
         />
-        <Frame Content="Frame" HorizontalAlignment="Left" Height="356" Margin="10,55,0,0" VerticalAlignment="Top" Width="774" NavigationUIVisibility="Hidden"/>
+
+        <Grid Margin="0,50,0,0">
+            <Frame Content="Frame" 
+               HorizontalAlignment="Left"
+               Height="421" 
+               VerticalAlignment="Top" 
+               Width="794" 
+               NavigationUIVisibility="Hidden"
+               x:Name="frame"/>
+        </Grid>
 
     </Grid>
 </Window>

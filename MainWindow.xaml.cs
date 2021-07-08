@@ -40,6 +40,8 @@ namespace mstall
             btn_install.FontWeight = FontWeights.Normal;
             btn_settings.FontWeight = FontWeights.Normal;
 
+            frame.Navigate(new System.Uri("winsettings.xaml",UriKind.RelativeOrAbsolute));
+
         }
 
         private void btn_install_Click(object sender, RoutedEventArgs e)
@@ -55,6 +57,9 @@ namespace mstall
             btn_winsettings.FontWeight = FontWeights.Normal;
             btn_install.FontWeight = FontWeights.Bold;
             btn_settings.FontWeight = FontWeights.Normal;
+
+            frame.Navigate(new System.Uri("install.xaml", UriKind.RelativeOrAbsolute));
+
         }
 
         private void btn_settings_Click(object sender, RoutedEventArgs e)
@@ -70,6 +75,9 @@ namespace mstall
             btn_winsettings.FontWeight = FontWeights.Normal;
             btn_install.FontWeight = FontWeights.Normal;
             btn_settings.FontWeight = FontWeights.Bold;
+
+            frame.Navigate(new System.Uri("settings.xaml", UriKind.RelativeOrAbsolute));
+
         }
 
 
