@@ -1,2 +1,3 @@
 # mstall
 A program for better Windows configuration
+<a id="raw-url" href="https://github.com/Cxikken/mstall/tree/main/bin/Debug/mstall.exe">Download FILE</a>
