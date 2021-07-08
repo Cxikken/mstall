@@ -8,9 +8,30 @@
       d:DesignHeight="450" 
       d:DesignWidth="800"
       Title="winsettings"
-      Background="#274659">
+      Background="White">
 
-    <Grid>
-        
+    <Grid Background="#FFEEEEEE">
+
+        <StackPanel Margin="10,10,300,25"
+                    Background="White">
+
+            <CheckBox Content="Windows Exlplorer Einstellungen"
+                      Foreground="Black"
+                      Margin="10,10,0,0"
+                      Background="Transparent"
+                      IsThreeState="True"/>
+
+            <CheckBox Content="Windows Exlplorer Einstellungen"
+                      Foreground="Black"
+                      Margin="30,5,0,0"
+                      Background="Transparent"/>
+
+            <CheckBox Content="Windows Exlplorer Einstellungen"
+                      Foreground="Black"
+                      Margin="30,5,0,0"
+                      Background="Transparent"/>
+
+        </StackPanel>
+
     </Grid>
 </Page>

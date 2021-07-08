@@ -9,7 +9,7 @@
         Height="500" 
         Width="800" 
         ResizeMode="CanMinimize"
-        Background="#274659"
+        Background="White"
         >
 
     <Window.Resources>
@@ -25,9 +25,9 @@
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="Transparent"/>
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="Transparent"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
@@ -52,15 +52,15 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#49728C"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#49728C"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Transparent"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="#A3B4BF"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="#A3B4BF"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="#274659"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="#274659"/>
+                                <Setter Property="Background" TargetName="border" Value="Transparent"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Transparent"/>
                                 <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -74,21 +74,22 @@
 
         <DockPanel Height="50"
                    VerticalAlignment="Top"
-                   Background="#131F26">
+                   Background="White">
 
             <Button Content="Windows Einstellungen"
                     Width="150"
-                    Background="#274659"
+                    Background="White"
                     HorizontalAlignment="Left"
                     Height="50"
-                    Foreground="White"
+                    Foreground="Black"
                     BorderBrush="Transparent"
                     x:Name="btn_winsettings" 
                     Style="{DynamicResource ButtonStyle}" 
                     Click="btn_winsettings_Click" 
                     FontWeight="Light"
                     FontFamily="Nirmala UI" 
-                    IsDefault="True"
+                    IsDefault="True" 
+                    BorderThickness="0"
             />
 
             <Button Content="Installieren" 
@@ -96,13 +97,13 @@
                     Background="Transparent"
                     HorizontalAlignment="Left"
                     Height="50"
-                    Foreground="White"
+                    Foreground="Black"
                     BorderBrush="Transparent"
                     x:Name="btn_install"
                     Style="{DynamicResource ButtonStyle}"
                     Click="btn_install_Click"
                     FontFamily="Nirmala UI"
-                
+                    BorderThickness="0"
             />
 
             <Button Content="Einstellungen" 
@@ -110,13 +111,13 @@
                     Background="Transparent"
                     HorizontalAlignment="Right"
                     Height="50"
-                    Foreground="White"
+                    Foreground="Black"
                     BorderBrush="Transparent"
                     x:Name="btn_settings"
                     Style="{DynamicResource ButtonStyle}"
                     Click="btn_settings_Click"
                     FontFamily="Nirmala UI"
-                
+                    BorderThickness="0"
             />
 
 
@@ -125,7 +126,7 @@
         </DockPanel>
 
 
-        <Rectangle Fill="#FFF4F4F5" 
+        <Rectangle Fill="Black" 
                    HorizontalAlignment="Left" 
                    Height="5" 
                    Margin="0,45,0,0" 
@@ -135,7 +136,7 @@
                    x:Name="rect_btn_windowssettings"
         />
 
-        <Rectangle Fill="#FFF4F4F5" 
+        <Rectangle Fill="Black" 
                    HorizontalAlignment="Left" 
                    Height="5" 
                    Margin="151,45,0,0" 
@@ -146,7 +147,7 @@
                    x:Name="rect_btn_install"
         />
 
-        <Rectangle Fill="#FFF4F4F5" 
+        <Rectangle Fill="Black" 
                    HorizontalAlignment="Left" 
                    Height="5" 
                    Margin="634,45,0,0" 

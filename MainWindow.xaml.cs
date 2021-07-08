@@ -23,15 +23,11 @@ namespace mstall
         public MainWindow()
         {
             InitializeComponent();
-
+            frame.Navigate(new System.Uri("winsettings.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void btn_winsettings_Click(object sender, RoutedEventArgs e)
         {
-            btn_winsettings.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(39, 70, 89));
-            btn_install.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(19, 31, 38));
-            btn_settings.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(19, 31, 38));
-
             rect_btn_windowssettings.Visibility = Visibility.Visible;
             rect_btn_install.Visibility = Visibility.Hidden;
             rect_btn_settings.Visibility = Visibility.Hidden;
@@ -46,10 +42,6 @@ namespace mstall
 
         private void btn_install_Click(object sender, RoutedEventArgs e)
         {
-            btn_winsettings.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(19, 31, 38));
-            btn_install.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(39, 70, 89));
-            btn_settings.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(19, 31, 38));
-
             rect_btn_windowssettings.Visibility = Visibility.Hidden;
             rect_btn_install.Visibility = Visibility.Visible;
             rect_btn_settings.Visibility = Visibility.Hidden;
@@ -64,10 +56,6 @@ namespace mstall
 
         private void btn_settings_Click(object sender, RoutedEventArgs e)
         {
-            btn_winsettings.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(19, 31, 38));
-            btn_install.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(19, 31, 38));
-            btn_settings.Background = new System.Windows.Media.SolidColorBrush(Color.FromRgb(39, 70, 89));
-
             rect_btn_windowssettings.Visibility = Visibility.Hidden;
             rect_btn_install.Visibility = Visibility.Hidden;
             rect_btn_settings.Visibility = Visibility.Visible;
