@@ -19,29 +19,64 @@
 
     <Grid Background="#FFEEEEEE">
 
-        <StackPanel Margin="10,10,300,25"
-                    Background="White">
+        <ListBox HorizontalAlignment="Left" 
+                 Height="390"
+                 Margin="10,10,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="575" 
+                 Background="White"
+                 x:Name="winsettings_listbox">
 
-            <CheckBox Content="Windows Exlplorer Einstellungen"
-                      Foreground="Black"
-                      Margin="10,10,0,0"
-                      Background="#FF3E93AC"
-                      IsThreeState="True"
-                      FontSize="15"/>
+            <ListBoxItem MouseUp="ListBoxItem_explorersettings_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="img_explorersettings" Source="/Assets/icons8-schalter-an-32.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Explorer Einstellungen"/>
+                </StackPanel>
+            </ListBoxItem>
+            
+            <ListBoxItem MouseUp="ListBoxItem_HideFileExt_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image x:Name="img_hidefileext"
+                           Source="/Assets/icons8-schalter-an-32.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Erweiterungen bei bekannten Dateitypen ausblenden deaktivieren"/>
+                </StackPanel>
+            </ListBoxItem>
 
-            <CheckBox Content="Windows Exlplorer Einstellungen"
-                      Foreground="Black"
-                      Margin="30,5,0,0"
-                      Background="#FF3E93AC"
-                      FontSize="15"/>
+            <ListBoxItem MouseUp="ListBoxItem_Hidden_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image  x:Name="img_hidden"
+                            Source="/Assets/icons8-schalter-an-32.png"
+                            Width="20"/>
+                    <TextBlock FontSize="15" Text="   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen"/>
+                </StackPanel>
+            </ListBoxItem>
 
-            <CheckBox Content="Windows Exlplorer Einstellungen"
-                      Foreground="Black"
-                      Margin="30,5,0,0"
-                      Background="#FF3E93AC"
-                      FontSize="15"/>
+            <ListBoxItem MouseUp="ListBoxItem_SharingWizardOn_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image x:Name="img_sharingwizardon"
+                           Source="/Assets/icons8-schalter-an-32.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Freigabeassistent deaktivieren"/>
+                </StackPanel>
+            </ListBoxItem>
 
-        </StackPanel>
+            <ListBoxItem MouseUp="ListBoxItem_NavPanelExpandToCurrentFolder_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image x:Name="img_navpanel"
+                           Source="/Assets/icons8-schalter-an-32.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Explorer Einstellungen"/>
+                </StackPanel>
+            </ListBoxItem>
+
+
+        </ListBox>
 
     </Grid>
 </Page>
