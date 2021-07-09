@@ -73,15 +73,14 @@
     <Grid>
 
         <DockPanel Height="50"
-                   VerticalAlignment="Top"
-                   Background="White">
+                   VerticalAlignment="Top" Background="#FF3E93AC">
 
             <Button Content="Windows Einstellungen"
                     Width="150"
-                    Background="White"
+                    Background="Transparent"
                     HorizontalAlignment="Left"
                     Height="50"
-                    Foreground="Black"
+                    Foreground="White"
                     BorderBrush="Transparent"
                     x:Name="btn_winsettings" 
                     Style="{DynamicResource ButtonStyle}" 
@@ -97,7 +96,7 @@
                     Background="Transparent"
                     HorizontalAlignment="Left"
                     Height="50"
-                    Foreground="Black"
+                    Foreground="White"
                     BorderBrush="Transparent"
                     x:Name="btn_install"
                     Style="{DynamicResource ButtonStyle}"
@@ -111,7 +110,7 @@
                     Background="Transparent"
                     HorizontalAlignment="Right"
                     Height="50"
-                    Foreground="Black"
+                    Foreground="White"
                     BorderBrush="Transparent"
                     x:Name="btn_settings"
                     Style="{DynamicResource ButtonStyle}"
@@ -126,32 +125,32 @@
         </DockPanel>
 
 
-        <Rectangle Fill="Black" 
+        <Rectangle Fill="White" 
                    HorizontalAlignment="Left" 
                    Height="5" 
                    Margin="0,45,0,0" 
-                   Stroke="White" 
+                   Stroke="Transparent" 
                    VerticalAlignment="Top" 
                    Width="150"
                    x:Name="rect_btn_windowssettings"
         />
 
-        <Rectangle Fill="Black" 
+        <Rectangle Fill="White" 
                    HorizontalAlignment="Left" 
                    Height="5" 
                    Margin="151,45,0,0" 
-                   Stroke="White" 
+                   Stroke="Transparent" 
                    VerticalAlignment="Top" 
                    Width="150"
                    Visibility="Hidden"
                    x:Name="rect_btn_install"
         />
 
-        <Rectangle Fill="Black" 
+        <Rectangle Fill="White" 
                    HorizontalAlignment="Left" 
                    Height="5" 
                    Margin="634,45,0,0" 
-                   Stroke="White" 
+                   Stroke="Transparent" 
                    VerticalAlignment="Top" 
                    Width="150"
                    Visibility="Hidden"
@@ -159,13 +158,17 @@
         />
 
         <Grid Margin="0,50,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="497*"/>
+                <ColumnDefinition Width="297*"/>
+            </Grid.ColumnDefinitions>
             <Frame Content="Frame" 
                HorizontalAlignment="Left"
                Height="421" 
                VerticalAlignment="Top" 
                Width="794" 
                NavigationUIVisibility="Hidden"
-               x:Name="frame"/>
+               x:Name="frame" Grid.ColumnSpan="2"/>
         </Grid>
 
     </Grid>
