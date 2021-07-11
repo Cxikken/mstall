@@ -47,3 +47,10 @@ C:\Users\Kilian\source\repos\mstall\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Kilian\source\repos\mstall\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Kilian\source\repos\mstall\obj\Debug\App.baml
 C:\Users\Kilian\source\repos\mstall\obj\Debug\mstall.csproj.CopyComplete
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\MaterialDesignColors.dll
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\MaterialDesignColors.pdb
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\App.baml
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\mstall.csproj.CopyComplete

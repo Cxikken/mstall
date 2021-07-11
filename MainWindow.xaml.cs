@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Reflection;
+using System.Deployment.Application;
+using System.Net;
 
 namespace mstall
 {
@@ -20,10 +23,17 @@ namespace mstall
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        string ver;
+        string newestver;
+
         public MainWindow()
         {
             InitializeComponent();
             frame.Navigate(new System.Uri("winsettings.xaml", UriKind.RelativeOrAbsolute));
+
+            versionnumber();
+
         }
 
         private void btn_winsettings_Click(object sender, RoutedEventArgs e)
@@ -67,6 +77,48 @@ namespace mstall
             frame.Navigate(new System.Uri("settings.xaml", UriKind.RelativeOrAbsolute));
 
         }
+
+
+        public void versionnumber()
+        {
+
+            try
+            {
+                var version = ApplicationDeployment.CurrentDeployment.CurrentVersion;
+                ver = Convert.ToString(version).Substring(0, Convert.ToString(version).Length - 4);
+            }
+            catch (Exception)
+            {
+                var version = Assembly.GetExecutingAssembly().GetName().Version;
+                ver = Convert.ToString(version).Substring(0, Convert.ToString(version).Length - 4);
+            }
+
+            WebClient webClient = new WebClient();
+
+            try
+            {
+                newestver = webClient.DownloadString("https://pastebin.com/raw/sQftF95n");
+            }
+            catch (System.Net.WebException)
+            {
+                newestver = "0";
+            }
+
+             /*   if (ver == newestver)
+            {
+                lbl_test.Content = "Die neuste Version ist bereits installiert";
+            }
+            else if (newestver == "0")
+            {
+                lbl_test.Content = "Version konnnte nicht abgefragt werden";
+            }
+            else
+            {
+                lbl_test.Content = "Es ist eine neue Version verfgbar";
+            } */
+
+            this.Title = "mstall" + " " + ver;
+        } 
 
 
     }

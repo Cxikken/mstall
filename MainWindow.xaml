@@ -102,7 +102,7 @@
                     Style="{DynamicResource ButtonStyle}"
                     Click="btn_install_Click"
                     FontFamily="Nirmala UI"
-                    BorderThickness="0"
+                    BorderThickness="0" IsEnabled="False" Visibility="Hidden"
             />
 
             <Button Content="Einstellungen" 
@@ -116,7 +116,7 @@
                     Style="{DynamicResource ButtonStyle}"
                     Click="btn_settings_Click"
                     FontFamily="Nirmala UI"
-                    BorderThickness="0"
+                    BorderThickness="0" IsEnabled="False" Visibility="Hidden"
             />
 
 
@@ -158,17 +158,12 @@
         />
 
         <Grid Margin="0,50,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="497*"/>
-                <ColumnDefinition Width="297*"/>
-            </Grid.ColumnDefinitions>
             <Frame Content="Frame" 
-               HorizontalAlignment="Left"
-               Height="421" 
-               VerticalAlignment="Top" 
-               Width="794" 
+               HorizontalAlignment="Center" 
+               Width="800"
                NavigationUIVisibility="Hidden"
-               x:Name="frame" Grid.ColumnSpan="2"/>
+               x:Name="frame" 
+               Margin="0,0,0,0"/>
         </Grid>
 
     </Grid>

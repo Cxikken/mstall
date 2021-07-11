@@ -17,29 +17,29 @@
       Background="{DynamicResource MaterialDesignPaper}"
       FontFamily="{DynamicResource MaterialDesignFont}">
 
-    <Grid Background="#FFEEEEEE">
+    <Grid Background="{DynamicResource MaterialDesignPaper}">
 
         <ListBox HorizontalAlignment="Left" 
                  Height="390"
-                 Margin="10,10,0,0" 
                  VerticalAlignment="Top" 
-                 Width="575" 
-                 Background="White"
-                 x:Name="winsettings_listbox">
+                 Width="550" 
+                 Background="{DynamicResource MaterialDesignPaper}"
+                 x:Name="winsettings_listbox"
+                 Margin="20,10,0,10">
 
             <ListBoxItem MouseUp="ListBoxItem_explorersettings_MouseUp">
                 <StackPanel Orientation="Horizontal">
-                    <Image x:Name="img_explorersettings" Source="/Assets/icons8-schalter-an-32.png"
+                    <Image x:Name="img_explorersettings" Source="/Assets/switch_on.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Explorer Einstellungen"/>
                 </StackPanel>
             </ListBoxItem>
-            
+
             <ListBoxItem MouseUp="ListBoxItem_HideFileExt_MouseUp">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_hidefileext"
-                           Source="/Assets/icons8-schalter-an-32.png"
+                           Source="/Assets/switch_on.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Erweiterungen bei bekannten Dateitypen ausblenden deaktivieren"/>
                 </StackPanel>
@@ -49,7 +49,7 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image  x:Name="img_hidden"
-                            Source="/Assets/icons8-schalter-an-32.png"
+                            Source="/Assets/switch_on.png"
                             Width="20"/>
                     <TextBlock FontSize="15" Text="   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen"/>
                 </StackPanel>
@@ -59,7 +59,7 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_sharingwizardon"
-                           Source="/Assets/icons8-schalter-an-32.png"
+                           Source="/Assets/switch_on.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Freigabeassistent deaktivieren"/>
                 </StackPanel>
@@ -69,14 +69,114 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_navpanel"
-                           Source="/Assets/icons8-schalter-an-32.png"
+                           Source="/Assets/switch_on.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Explorer Einstellungen"/>
                 </StackPanel>
             </ListBoxItem>
 
+            <ListBoxItem MouseUp="ListBoxItem_ad_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="img_ad" Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Werbung im Startmenü entfernen"/>
+                </StackPanel>
+            </ListBoxItem>
 
+            <ListBoxItem MouseUp="ListBoxItem_effects_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="img_effects" Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Visuelle Effekte minimieren (empfohlen für langsame Geräte)"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem MouseUp="ListBoxItem_winminimize_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image x:Name="img_winminimize"
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen von Effekt beim Minimieren von Fenstern"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem MouseUp="ListBoxItem_listviewshadow_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image x:Name="img_listviewshadow"
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen vom Schatten hinter Text von Desktopicons"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image x:Name="img_dragfullwindows"
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
+                </StackPanel>
+            </ListBoxItem>
+            
+            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image 
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" Text="         "/>
+                    <Image 
+                           Source="/Assets/switch_on.png"
+                           Width="20"/>
+                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
+                </StackPanel>
+            </ListBoxItem>
+
+
+            
         </ListBox>
+
+
+
+
+
+        <Button x:Name="btn_change" 
+                Content="Ändern" 
+                Margin="594,321,30,37" 
+                Background="#FF3E93AC" 
+                BorderBrush="#FF3E93AC" 
+                Height="Auto" 
+                FontSize="20"
+                RenderTransformOrigin="0.618,0.024"/>
 
     </Grid>
 </Page>
