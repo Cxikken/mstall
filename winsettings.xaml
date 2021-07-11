@@ -20,7 +20,8 @@
     <Grid Background="{DynamicResource MaterialDesignPaper}">
 
         <ListBox HorizontalAlignment="Left" 
-                 Height="390"
+                 Height="390
+"
                  VerticalAlignment="Top" 
                  Width="550" 
                  Background="{DynamicResource MaterialDesignPaper}"
@@ -85,7 +86,7 @@
 
             <ListBoxItem MouseUp="ListBoxItem_effects_MouseUp">
                 <StackPanel Orientation="Horizontal">
-                    <Image x:Name="img_effects" Source="/Assets/switch_on.png"
+                    <Image x:Name="img_effects" Source="/Assets/switch_off.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Visuelle Effekte minimieren (empfohlen für langsame Geräte)"/>
                 </StackPanel>
@@ -95,7 +96,7 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_winminimize"
-                           Source="/Assets/switch_on.png"
+                           Source="/Assets/switch_off.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Entfernen von Effekt beim Minimieren von Fenstern"/>
                 </StackPanel>
@@ -105,7 +106,7 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_listviewshadow"
-                           Source="/Assets/switch_on.png"
+                           Source="/Assets/switch_off.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Entfernen vom Schatten hinter Text von Desktopicons"/>
                 </StackPanel>
@@ -115,54 +116,11 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_dragfullwindows"
-                           Source="/Assets/switch_on.png"
+                           Source="/Assets/switch_off.png"
                            Width="20"/>
                     <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
                 </StackPanel>
             </ListBoxItem>
-
-            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontSize="15" Text="         "/>
-                    <Image
-                           Source="/Assets/switch_on.png"
-                           Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
-                </StackPanel>
-            </ListBoxItem>
-            
-            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontSize="15" Text="         "/>
-                    <Image 
-                           Source="/Assets/switch_on.png"
-                           Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
-                </StackPanel>
-            </ListBoxItem>
-
-            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontSize="15" Text="         "/>
-                    <Image
-                           Source="/Assets/switch_on.png"
-                           Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
-                </StackPanel>
-            </ListBoxItem>
-
-            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontSize="15" Text="         "/>
-                    <Image 
-                           Source="/Assets/switch_on.png"
-                           Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
-                </StackPanel>
-            </ListBoxItem>
-
-
-            
         </ListBox>
 
 

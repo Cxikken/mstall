@@ -31,11 +31,21 @@ namespace mstall
         bool SharingWizardOn_status = true;
         bool NavPanelExpandToCurrentFolder_status = true;
 
+        bool ad_status = true;
+
+        bool effects_status = false;
+        bool winminimize_status = false;
+        bool listviewshadow_status = false;
+        bool dragfullwindows_status = false;
+
 
         public winsettings()
         {
             InitializeComponent();
         }
+
+        #region Explorereinstellungen
+
 
         private void ListBoxItem_explorersettings_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -121,7 +131,6 @@ namespace mstall
 
                 img_sharingwizardon.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
                 SharingWizardOn_status = false;
-                abteil_explorer();
             }
             else
             {
@@ -159,29 +168,122 @@ namespace mstall
             }
         }
 
+        #endregion
+
+        #region AD
+
         private void ListBoxItem_ad_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            if (ad_status)
+            {
+                img_ad.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                ad_status = false;
+            }
+            else
+            {
+                img_ad.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                ad_status = true;
+            }
         }
+
+        #endregion
+
+        #region Effekte
 
         private void ListBoxItem_effects_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (effects_status)
+            {
+                img_effects.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                effects_status = false;
 
+
+                img_winminimize.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                winminimize_status = false;
+                img_listviewshadow.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                listviewshadow_status = false;
+                img_dragfullwindows.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                dragfullwindows_status = false;
+
+            }
+            else
+            {
+                img_effects.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                effects_status = true;
+
+                img_winminimize.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                winminimize_status = true;
+                img_listviewshadow.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                listviewshadow_status = true;
+                img_dragfullwindows.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                dragfullwindows_status = true;
+            }
         }
 
         private void ListBoxItem_winminimize_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (winminimize_status)
+            {
+                img_effects.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                effects_status = false;
 
+                img_winminimize.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                winminimize_status = false;
+            }
+            else
+            {
+                img_winminimize.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                winminimize_status = true;
+                abteil_effects();
+            }
         }
 
         private void ListBoxItem_listviewshadow_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (listviewshadow_status)
+            {
+                img_effects.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                effects_status = false;
 
+                img_listviewshadow.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                listviewshadow_status = false;
+            }
+            else
+            {
+                img_listviewshadow.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                listviewshadow_status = true;
+                abteil_effects();
+            }
         }
 
         private void ListBoxItem_dragfullwindows_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (dragfullwindows_status)
+            {
+                img_effects.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                effects_status = false;
 
+                img_dragfullwindows.Source = new BitmapImage(new Uri(@"/Assets/switch_off.png", UriKind.Relative));
+                dragfullwindows_status = false;
+            }
+            else
+            {
+                img_dragfullwindows.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                dragfullwindows_status = true;
+                abteil_effects();
+            }
         }
+
+        private void abteil_effects()
+        {
+            if (winminimize_status && listviewshadow_status && dragfullwindows_status)
+            {
+                img_effects.Source = new BitmapImage(new Uri(@"/Assets/switch_on.png", UriKind.Relative));
+                effects_status = true;
+            }
+        }
+
+        #endregion
+
     }
 }

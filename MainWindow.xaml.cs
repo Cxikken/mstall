@@ -117,7 +117,7 @@ namespace mstall
                 lbl_test.Content = "Es ist eine neue Version verfgbar";
             } */
 
-            this.Title = "mstall" + " " + ver;
+            this.Title = "mstall" + " " + "v." + ver;
         } 
 
 
