@@ -31,7 +31,6 @@ namespace mstall
         {
             InitializeComponent();
             frame.Navigate(new System.Uri("winsettings.xaml", UriKind.RelativeOrAbsolute));
-
             versionnumber();
 
         }
@@ -77,7 +76,6 @@ namespace mstall
             frame.Navigate(new System.Uri("settings.xaml", UriKind.RelativeOrAbsolute));
 
         }
-
 
         public void versionnumber()
         {

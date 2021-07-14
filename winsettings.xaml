@@ -20,8 +20,7 @@
     <Grid Background="{DynamicResource MaterialDesignPaper}">
 
         <ListBox HorizontalAlignment="Left" 
-                 Height="390
-"
+                 Height="390"
                  VerticalAlignment="Top" 
                  Width="550" 
                  Background="{DynamicResource MaterialDesignPaper}"
@@ -72,7 +71,7 @@
                     <Image x:Name="img_navpanel"
                            Source="/Assets/switch_on.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Explorer Einstellungen"/>
+                    <TextBlock FontSize="15" Text="   Erweitern, um Ordner zu öffnen aktivieren"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -122,10 +121,6 @@
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
-
-
-
-
 
         <Button x:Name="btn_change" 
                 Content="Ändern" 
