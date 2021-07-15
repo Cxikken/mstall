@@ -27,6 +27,15 @@ namespace mstall
         string ver;
         string newestver;
 
+
+        public class MyGlobals
+        {
+            public static bool explorerer;
+            public static bool werbung;
+            public static bool effekte;
+        }
+
+
         public MainWindow()
         {
             InitializeComponent();

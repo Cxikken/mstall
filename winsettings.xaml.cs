@@ -25,6 +25,7 @@ namespace mstall
     /// </summary>
     public partial class winsettings : Page
     {
+        //Liste
         bool explorersettings_status = true;
         bool HideFileExt_status = true;
         bool Hidden_status = true;
@@ -38,13 +39,20 @@ namespace mstall
         bool listviewshadow_status = false;
         bool dragfullwindows_status = false;
 
+        //Fehler
+        bool error_explorrersettings = false;
+        bool error_ad = false;
+        bool error_effects = false;
+
 
         public winsettings()
         {
             InitializeComponent();
         }
 
-        #region Explorereinstellungen
+
+        //Liste mit Einstellungen
+        #region Explorereinstellungen Liste
 
 
         private void ListBoxItem_explorersettings_MouseUp(object sender, MouseButtonEventArgs e)
@@ -170,7 +178,7 @@ namespace mstall
 
         #endregion
 
-        #region AD
+        #region AD Liste
 
         private void ListBoxItem_ad_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -188,7 +196,7 @@ namespace mstall
 
         #endregion
 
-        #region Effekte
+        #region Effekte Liste
 
         private void ListBoxItem_effects_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -284,6 +292,107 @@ namespace mstall
         }
 
         #endregion
+
+
+        //Button wird geklickt
+        
+        private void btn_change_Click(object sender, RoutedEventArgs e)
+        {
+            explorereinstellungen(error_explorrersettings);
+            ad(error_ad);
+            effects(error_effects);
+        }
+
+        #region Explorereinstellungen
+
+        private void explorereinstellungen(bool error_explorrersettings)
+        {
+            if (explorersettings_status == true)
+            {
+                //
+            }
+            else
+            {
+                if (HideFileExt_status == true)
+                {
+                    //
+                }
+
+                if (Hidden_status == true)
+                {
+                    //
+                }
+
+                if (SharingWizardOn_status == true)
+                {
+                    //
+                }
+
+                if (NavPanelExpandToCurrentFolder_status == true)
+                {
+                    //
+                }
+            }
+        }
+
+        #endregion
+
+        #region AD
+
+        private void ad(bool error_ad)
+        {
+            //
+        }
+
+        #endregion
+
+        #region Effekte
+
+        private void effects(bool error_effects)
+        {
+            if (effects_status == true)
+            {
+                //
+            }
+            else
+            {
+                if (winminimize_status == true)
+                {
+                    //
+                }
+
+                if (listviewshadow_status == true)
+                {
+                    //
+                }
+
+                if (dragfullwindows_status == true)
+                {
+                    //
+                }
+            }
+        }
+
+        #endregion
+
+
+        private void error()
+        {
+            if(error_explorrersettings)
+            {
+                //
+            }
+
+            if (error_ad)
+            {
+                //
+            }
+
+            if (error_effects)
+            {
+                //
+            }
+        }
 
     }
 }
