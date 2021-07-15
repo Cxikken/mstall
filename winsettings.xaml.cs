@@ -25,6 +25,23 @@ namespace mstall
     /// </summary>
     public partial class winsettings : Page
     {
+
+        string language = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
+        #region words
+        string[] lang_expsettings = { "Explorer Settings", "Explorer Einstellungen" };
+        string[] lang_hidefileext = { "Show extensions for known file types", "Erweiterungen bei bekannten Dateitypen einblenden" };
+        //string[] lang_hidden = { "", "   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen" };
+        //string[] lang_sharingwizard = { "", "   Freigabeassistent deaktivieren" };
+        //string[] lang_navpanelexpandtocurrentfolder = { "", "   Erweitern, um Ordner zu öffnen aktivieren" };
+        string[] lang_ad = { "Remove advertising in Start menu", "   Werbung im Startmenü entfernen" }; 
+        //string[] lang_effects = { "", "   Visuelle Effekte minimieren (empfohlen für langsame Geräte)" };
+        //string[] lang_winminimize = { "", "   Entfernen von Effekt beim Minimieren von Fenstern" };
+        //string[] lang_listviewshadow = { "", "   Entfernen vom Schatten hinter Text von Desktopicons" };
+        //string[] lang_dragfullwindows = { "", "   Entfernen des Effektes beim Verändern der Größe der Fenster" };
+        string[] lang_btn_change = { "Change", "Ändern" };
+        #endregion
+
         //Liste
         bool explorersettings_status = true;
         bool HideFileExt_status = true;
@@ -48,6 +65,7 @@ namespace mstall
         public winsettings()
         {
             InitializeComponent();
+            Language(language);
         }
 
 
@@ -375,6 +393,7 @@ namespace mstall
 
         #endregion
 
+        #region Error
 
         private void error()
         {
@@ -393,6 +412,26 @@ namespace mstall
                 //
             }
         }
+        #endregion
 
+        #region Language
+
+        private new void Language(string language)
+        {
+            int lang;
+
+            if (language == "de")
+            {
+                lang = 1;
+            }
+            else
+            {
+                lang = 0;
+            }
+
+
+        }
+
+        #endregion
     }
 }

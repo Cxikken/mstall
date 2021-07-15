@@ -131,6 +131,7 @@
                 FontSize="20"
                 RenderTransformOrigin="0.618,0.024"
                 Click="btn_change_Click"/>
+        <Label x:Name="lbl" Content="Label" HorizontalAlignment="Left" Margin="703,289,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

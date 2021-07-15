@@ -28,12 +28,14 @@ namespace mstall
         string newestver;
 
 
-        public class MyGlobals
-        {
-            public static bool explorerer;
-            public static bool werbung;
-            public static bool effekte;
-        }
+        string language = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
+        #region words
+        string[] winsettings = { "Windows Settings", "Windows Einstellungen" };
+        string[] install = { "Install", "Installieren" };
+        string[] settings = { "Settings", "Einstellungen" };
+        #endregion
+
 
 
         public MainWindow()
@@ -42,7 +44,11 @@ namespace mstall
             frame.Navigate(new System.Uri("winsettings.xaml", UriKind.RelativeOrAbsolute));
             versionnumber();
 
+            Language(language);
+
         }
+
+        #region Buttons
 
         private void btn_winsettings_Click(object sender, RoutedEventArgs e)
         {
@@ -86,6 +92,10 @@ namespace mstall
 
         }
 
+        #endregion
+
+        #region Version
+
         public void versionnumber()
         {
 
@@ -125,8 +135,30 @@ namespace mstall
             } */
 
             this.Title = "mstall" + " " + "v." + ver;
-        } 
+        }
 
+        #endregion
+
+        #region Language
+
+        private new void Language(string language)
+        {
+            int lang;
+
+            if (language == "de")
+            {
+                lang = 1;
+            } else
+            {
+                lang = 0;
+            }
+
+            btn_winsettings.Content = winsettings[lang];
+            btn_install.Content = install[lang];
+            btn_settings.Content = settings[lang];
+        }
+
+        #endregion
 
     }
 }
