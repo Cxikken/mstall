@@ -17,6 +17,8 @@ using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Deployment.Application;
+using Microsoft.Win32;
+using System.Windows.Forms;
 
 namespace mstall
 {
@@ -26,21 +28,31 @@ namespace mstall
     public partial class winsettings : Page
     {
 
+        #region language
+
         string language = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
 
-        #region words
         string[] lang_expsettings = { "Explorer Settings", "Explorer Einstellungen" };
         string[] lang_hidefileext = { "Show extensions for known file types", "Erweiterungen bei bekannten Dateitypen einblenden" };
-        //string[] lang_hidden = { "", "   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen" };
-        //string[] lang_sharingwizard = { "", "   Freigabeassistent deaktivieren" };
-        //string[] lang_navpanelexpandtocurrentfolder = { "", "   Erweitern, um Ordner zu öffnen aktivieren" };
+        string[] lang_hidden = { "", "   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen" };                                       //
+        string[] lang_sharingwizard = { "", "   Freigabeassistent deaktivieren" };                                                      //
+        string[] lang_navpanelexpandtocurrentfolder = { "", "   Erweitern, um Ordner zu öffnen aktivieren" };                           //
         string[] lang_ad = { "Remove advertising in Start menu", "   Werbung im Startmenü entfernen" }; 
-        //string[] lang_effects = { "", "   Visuelle Effekte minimieren (empfohlen für langsame Geräte)" };
-        //string[] lang_winminimize = { "", "   Entfernen von Effekt beim Minimieren von Fenstern" };
-        //string[] lang_listviewshadow = { "", "   Entfernen vom Schatten hinter Text von Desktopicons" };
-        //string[] lang_dragfullwindows = { "", "   Entfernen des Effektes beim Verändern der Größe der Fenster" };
+        string[] lang_effects = { "", "   Visuelle Effekte minimieren (empfohlen für langsame Geräte)" };                               //
+        string[] lang_winminimize = { "", "   Entfernen von Effekt beim Minimieren von Fenstern" };                                     //
+        string[] lang_listviewshadow = { "", "   Entfernen vom Schatten hinter Text von Desktopicons" };                                //
+        string[] lang_dragfullwindows = { "", "   Entfernen des Effektes beim Verändern der Größe der Fenster" };                       //
         string[] lang_btn_change = { "Change", "Ändern" };
+        string[] lang_message = { "", "Der Vorgang wurde erfolgreich abgeschlossen" };                                                                                             //
+        string[] lang_errormessage = { "", "Folgende Einstellungen konnten nicht geändert werden:" };                                   //
+
+
+        string caption = "mstall ® 2021 by Kilian Schuch";
+
+        int lang;
         #endregion
+
+        bool settings_error = false;
 
         //Liste
         bool explorersettings_status = true;
@@ -55,12 +67,6 @@ namespace mstall
         bool winminimize_status = false;
         bool listviewshadow_status = false;
         bool dragfullwindows_status = false;
-
-        //Fehler
-        bool error_explorrersettings = false;
-        bool error_ad = false;
-        bool error_effects = false;
-
 
         public winsettings()
         {
@@ -316,40 +322,35 @@ namespace mstall
         
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
-            explorereinstellungen(error_explorrersettings);
-            ad(error_ad);
-            effects(error_effects);
+            explorereinstellungen();
+            ad();
+            effects();
+            check();
         }
 
         #region Explorereinstellungen
 
-        private void explorereinstellungen(bool error_explorrersettings)
+        private void explorereinstellungen()
         {
-            if (explorersettings_status == true)
+            //Einstellungen setzen
+            if (HideFileExt_status)
             {
-                //
+                Registry.SetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "HideFileExt", 0, Microsoft.Win32.RegistryValueKind.DWord);
             }
-            else
+
+            if (Hidden_status == true)
             {
-                if (HideFileExt_status == true)
-                {
-                    //
-                }
+                Registry.SetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "Hidden", 1, Microsoft.Win32.RegistryValueKind.DWord);
+            }
 
-                if (Hidden_status == true)
-                {
-                    //
-                }
+            if (SharingWizardOn_status == true)
+            {
+                Registry.SetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "SharingWizardOn", 0, Microsoft.Win32.RegistryValueKind.DWord);
+            }
 
-                if (SharingWizardOn_status == true)
-                {
-                    //
-                }
-
-                if (NavPanelExpandToCurrentFolder_status == true)
-                {
-                    //
-                }
+            if (NavPanelExpandToCurrentFolder_status == true)
+            {
+                Registry.SetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "NavPaneExpandToCurrentFolder", 1, Microsoft.Win32.RegistryValueKind.DWord);
             }
         }
 
@@ -357,69 +358,113 @@ namespace mstall
 
         #region AD
 
-        private void ad(bool error_ad)
+        private void ad()
         {
-            //
+            if (ad_status)
+            {
+                Registry.SetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager", "SilentInstalledAppsEnabled", 0, Microsoft.Win32.RegistryValueKind.DWord);
+            }
         }
+
 
         #endregion
 
         #region Effekte
 
-        private void effects(bool error_effects)
+        private void effects()
         {
-            if (effects_status == true)
-            {
-                //
-            }
-            else
-            {
-                if (winminimize_status == true)
-                {
-                    //
-                }
 
-                if (listviewshadow_status == true)
-                {
-                    //
-                }
-
-                if (dragfullwindows_status == true)
-                {
-                    //
-                }
+            if (winminimize_status == true)
+            {
+                Registry.SetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop\\WindowMetrics", "MinAnimate", 0, Microsoft.Win32.RegistryValueKind.String);
             }
+
+            if (listviewshadow_status == true)
+            {
+                Registry.SetValue("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PExplorer\\Advanced", "ListviewShadow", 0, Microsoft.Win32.RegistryValueKind.DWord);
+            }
+
+            if (dragfullwindows_status == true)
+            {
+                Registry.SetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop\\DragFullWindows", "DragFullWindows", 0, Microsoft.Win32.RegistryValueKind.String);
+            }
+            
         }
 
         #endregion
 
-        #region Error
+        #region check
 
-        private void error()
+        private void check()
         {
-            if(error_explorrersettings)
+
+            //Explorer
+            if (HideFileExt_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "HideFileExt", 1)) != "0")
             {
-                //
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_hidefileext[lang];
+                settings_error = true;
             }
 
-            if (error_ad)
+            if (Hidden_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "Hidden", 0)) != "1")
             {
-                //
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_hidden[lang];
+                settings_error = true;
             }
 
-            if (error_effects)
+            if (SharingWizardOn_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "SharingWizardOn", 1)) != "0")
             {
-                //
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_sharingwizard[lang];
+                settings_error = true;
+            }
+
+            if (NavPanelExpandToCurrentFolder_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced", "NavPaneExpandToCurrentFolder", 0)) != "1")
+            {
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_navpanelexpandtocurrentfolder[lang];
+                settings_error = true;
+            }
+
+            //Ad
+            if (ad_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager", "SilentInstalledAppsEnabled", 1)) != "0")
+            {
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_ad[lang];
+                settings_error = true;
+            }
+
+            //Effects
+            if (winminimize_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop\\WindowMetrics", "MinAnimate", 1)) != "0")
+            {
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_winminimize[lang];
+                settings_error = true;
+            }
+
+            if (listviewshadow_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PExplorer\\Advanced", "ListviewShadow", 1)) != "0")
+            {
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_listviewshadow[lang];
+                settings_error = true;
+            }
+
+            if (dragfullwindows_status && Convert.ToString(Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop\\DragFullWindows", "DragFullWindows", 1)) != "0")
+            {
+                lang_errormessage[lang] = lang_errormessage[lang] + "\n • " + lang_dragfullwindows[lang];
+                settings_error = true;
+            }
+
+            if (settings_error)
+            {
+                System.Windows.Forms.MessageBox.Show(lang_errormessage[lang], caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show(lang_message[lang], caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
         #endregion
 
         #region Language
 
         private new void Language(string language)
         {
-            int lang;
-
             if (language == "de")
             {
                 lang = 1;
@@ -428,8 +473,6 @@ namespace mstall
             {
                 lang = 0;
             }
-
-
         }
 
         #endregion
