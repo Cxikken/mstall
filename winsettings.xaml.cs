@@ -34,17 +34,17 @@ namespace mstall
 
         string[] lang_expsettings = { "Explorer Settings", "Explorer Einstellungen" };
         string[] lang_hidefileext = { "Show extensions for known file types", "Erweiterungen bei bekannten Dateitypen einblenden" };
-        string[] lang_hidden = { "", "   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen" };                                       //
-        string[] lang_sharingwizard = { "", "   Freigabeassistent deaktivieren" };                                                      //
-        string[] lang_navpanelexpandtocurrentfolder = { "", "   Erweitern, um Ordner zu öffnen aktivieren" };                           //
-        string[] lang_ad = { "Remove advertising in Start menu", "   Werbung im Startmenü entfernen" }; 
-        string[] lang_effects = { "", "   Visuelle Effekte minimieren (empfohlen für langsame Geräte)" };                               //
-        string[] lang_winminimize = { "", "   Entfernen von Effekt beim Minimieren von Fenstern" };                                     //
-        string[] lang_listviewshadow = { "", "   Entfernen vom Schatten hinter Text von Desktopicons" };                                //
-        string[] lang_dragfullwindows = { "", "   Entfernen des Effektes beim Verändern der Größe der Fenster" };                       //
+        string[] lang_hidden = { "   Show hidden files, folders and drives", "   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen" };                                       
+        string[] lang_sharingwizard = { "   Disable Sharing Wizard", "   Freigabeassistent deaktivieren" };                                                      
+        string[] lang_navpanelexpandtocurrentfolder = { "   Expand to open folder", "   Erweitern, um Ordner zu öffnen aktivieren" };                           
+        string[] lang_ad = { "   Remove advertising in Start menu", "   Werbung im Startmenü entfernen" }; 
+        string[] lang_effects = { "   Minimize visual effects (recommended for slow devices)", "   Visuelle Effekte minimieren (empfohlen für langsame Geräte)" };                               
+        string[] lang_winminimize = { "   Remove effect when minimizing windows", "   Entfernen von Effekt beim Minimieren von Fenstern" };                                     
+        string[] lang_listviewshadow = { "   Remove shadow behind text from desktop icons", "   Entfernen vom Schatten hinter Text von Desktopicons" };                                
+        string[] lang_dragfullwindows = { "   Removing the effect when resizing the windows", "   Entfernen des Effektes beim Verändern der Größe der Fenster" };                       
         string[] lang_btn_change = { "Change", "Ändern" };
-        string[] lang_message = { "", "Der Vorgang wurde erfolgreich abgeschlossen" };                                                                                             //
-        string[] lang_errormessage = { "", "Folgende Einstellungen konnten nicht geändert werden:" };                                   //
+        string[] lang_message = { "The operation was completed successfully", "Der Vorgang wurde erfolgreich abgeschlossen" };                                                                                     
+        string[] lang_errormessage = { "The following settings could not be changed:", "Folgende Einstellungen konnten nicht geändert werden:" };                                   
 
 
         string caption = "mstall ® 2021 by Kilian Schuch";
