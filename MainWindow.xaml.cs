@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Reflection;
 using System.Deployment.Application;
 using System.Net;
+using System.IO;
 
 namespace mstall
 {
@@ -27,24 +28,25 @@ namespace mstall
         string ver;
         string newestver;
 
-
         string language = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-
+        int lang;
         #region words
         string[] winsettings = { "Windows Settings", "Windows Einstellungen" };
         string[] install = { "Install", "Installieren" };
         string[] settings = { "Settings", "Einstellungen" };
-        #endregion
+        string[] lang_messagever = { "", "Es ist eine neue Version verfügbar \n Soll die neue Version heruntergeladen werden?" };
 
+        string caption = "Windows Einstellungen ® 2021 by Kilian Schuch";
+        #endregion
 
 
         public MainWindow()
         {
             InitializeComponent();
             frame.Navigate(new System.Uri("winsettings.xaml", UriKind.RelativeOrAbsolute));
-            versionnumber();
 
             Language(language);
+            versionnumber();
 
         }
 
@@ -121,18 +123,23 @@ namespace mstall
                 newestver = "0";
             }
 
-             /*   if (ver == newestver)
+
+            if (newestver == "0")
             {
-                lbl_test.Content = "Die neuste Version ist bereits installiert";
+                //
             }
-            else if (newestver == "0")
+            else if (newestver != ver)
             {
-                lbl_test.Content = "Version konnnte nicht abgefragt werden";
+                MessageBoxResult result = MessageBox.Show(lang_messagever[lang], caption, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    string target = "https://github.com/Cxikken/mstall/releases/download/latest/mstall_setup.exe";
+                    System.Diagnostics.Process.Start(target);
+                }
+
             }
-            else
-            {
-                lbl_test.Content = "Es ist eine neue Version verfgbar";
-            } */
+
 
             this.Title = "mstall" + " " + "v." + ver;
         }
@@ -143,8 +150,6 @@ namespace mstall
 
         private new void Language(string language)
         {
-            int lang;
-
             if (language == "de")
             {
                 lang = 1;
