@@ -32,8 +32,8 @@ namespace mstall
 
         string language = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
 
-        string[] lang_expsettings = { "Explorer Settings", "Explorer Einstellungen" };
-        string[] lang_hidefileext = { "Show extensions for known file types", "Erweiterungen bei bekannten Dateitypen einblenden" };
+        string[] lang_expsettings = { "   Explorer Settings", "   Explorer Einstellungen" };
+        string[] lang_hidefileext = { "   Show extensions for known file types", "   Erweiterungen bei bekannten Dateitypen einblenden" };
         string[] lang_hidden = { "   Show hidden files, folders and drives", "   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen" };                                       
         string[] lang_sharingwizard = { "   Disable Sharing Wizard", "   Freigabeassistent deaktivieren" };                                                      
         string[] lang_navpanelexpandtocurrentfolder = { "   Expand to open folder", "   Erweitern, um Ordner zu öffnen aktivieren" };                           
@@ -324,7 +324,7 @@ namespace mstall
         {
             explorereinstellungen();
             ad();
-            effects();
+            Effects();
             check();
         }
 
@@ -371,7 +371,7 @@ namespace mstall
 
         #region Effekte
 
-        private void effects()
+        private void Effects()
         {
 
             if (winminimize_status == true)
@@ -473,6 +473,20 @@ namespace mstall
             {
                 lang = 0;
             }
+
+            txb_explorersettings.Text = lang_expsettings[lang];
+            txb_hidefileext.Text = lang_hidefileext[lang];
+            txb_hidden.Text = lang_hidden[lang];
+            txb_sharingwizardon.Text = lang_sharingwizard[lang];
+            txb_navpanel.Text = lang_navpanelexpandtocurrentfolder[lang];
+            txb_ad.Text = lang_ad[lang];
+            txb_effects.Text = lang_effects[lang];
+            txb_winminimize.Text = lang_winminimize[lang];
+            txb_listviewshadow.Text = lang_listviewshadow[lang];
+            txb_dragfullwindows.Text = lang_dragfullwindows[lang];
+
+            btn_change.Content = lang_btn_change[lang];
+
         }
 
         #endregion

@@ -30,11 +30,11 @@ namespace mstall
 
         string language = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
         int lang;
-        #region words
+        #region language
         string[] winsettings = { "Windows Settings", "Windows Einstellungen" };
         string[] install = { "Install", "Installieren" };
         string[] settings = { "Settings", "Einstellungen" };
-        string[] lang_messagever = { "", "Es ist eine neue Version verfügbar \n Soll die neue Version heruntergeladen werden?" };
+        string[] lang_messagever = { "There is a new version available \n Should the new version be downloaded?", "Es ist eine neue Version verfügbar \n Soll die neue Version heruntergeladen werden?" };
 
         string caption = "Windows Einstellungen ® 2021 by Kilian Schuch";
         #endregion

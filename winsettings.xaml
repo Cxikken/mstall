@@ -31,7 +31,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="img_explorersettings" Source="/Assets/switch_on.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Explorer Einstellungen"/>
+                    <TextBlock x:Name="txb_explorersettings" FontSize="15" Text="   Explorer Einstellungen"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -41,17 +41,17 @@
                     <Image x:Name="img_hidefileext"
                            Source="/Assets/switch_on.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Erweiterungen bei bekannten Dateitypen ausblenden deaktivieren"/>
+                    <TextBlock x:Name="txb_hidefileext" FontSize="15" Text="   Erweiterungen bei bekannten Dateitypen ausblenden deaktivieren"/>
                 </StackPanel>
             </ListBoxItem>
 
             <ListBoxItem MouseUp="ListBoxItem_Hidden_MouseUp">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock FontSize="15" Text="         "/>
+                    <TextBlock  FontSize="15" Text="         "/>
                     <Image  x:Name="img_hidden"
                             Source="/Assets/switch_on.png"
                             Width="20"/>
-                    <TextBlock FontSize="15" Text="   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen"/>
+                    <TextBlock x:Name="txb_hidden" FontSize="15" Text="   Ausgeblendete Dateien, Ordner und Laufwerke anzeigen"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -61,7 +61,7 @@
                     <Image x:Name="img_sharingwizardon"
                            Source="/Assets/switch_on.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Freigabeassistent deaktivieren"/>
+                    <TextBlock x:Name="txb_sharingwizardon" FontSize="15" Text="   Freigabeassistent deaktivieren"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -71,7 +71,7 @@
                     <Image x:Name="img_navpanel"
                            Source="/Assets/switch_on.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Erweitern, um Ordner zu öffnen aktivieren"/>
+                    <TextBlock x:Name="txb_navpanel" FontSize="15" Text="   Erweitern, um Ordner zu öffnen aktivieren"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -79,7 +79,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="img_ad" Source="/Assets/switch_on.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Werbung im Startmenü entfernen"/>
+                    <TextBlock x:Name="txb_ad" FontSize="15" Text="   Werbung im Startmenü entfernen"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -87,7 +87,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="img_effects" Source="/Assets/switch_off.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Visuelle Effekte minimieren (empfohlen für langsame Geräte)"/>
+                    <TextBlock x:Name="txb_effects" FontSize="15" Text="   Visuelle Effekte minimieren (empfohlen für langsame Geräte)"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -97,7 +97,7 @@
                     <Image x:Name="img_winminimize"
                            Source="/Assets/switch_off.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen von Effekt beim Minimieren von Fenstern"/>
+                    <TextBlock x:Name="txb_winminimize" FontSize="15" Text="   Entfernen von Effekt beim Minimieren von Fenstern"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -107,7 +107,7 @@
                     <Image x:Name="img_listviewshadow"
                            Source="/Assets/switch_off.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen vom Schatten hinter Text von Desktopicons"/>
+                    <TextBlock x:Name="txb_listviewshadow" FontSize="15" Text="   Entfernen vom Schatten hinter Text von Desktopicons"/>
                 </StackPanel>
             </ListBoxItem>
 
@@ -117,7 +117,7 @@
                     <Image x:Name="img_dragfullwindows"
                            Source="/Assets/switch_off.png"
                            Width="20"/>
-                    <TextBlock FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
+                    <TextBlock x:Name="txb_dragfullwindows" FontSize="15" Text="   Entfernen des Effektes beim Verändern der Größe der Fenster"/>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
