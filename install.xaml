@@ -8,16 +8,16 @@
       d:DesignHeight="450" 
       d:DesignWidth="800"
       Title="install"
-      Background="White">
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
 
     <Grid>
-
-        <TextBlock FontSize="30"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Text="Bald verfügbar."
-                   Foreground="Black"
-                   />
-
+        
     </Grid>
 </Page>

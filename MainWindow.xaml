@@ -86,12 +86,12 @@
                     Style="{DynamicResource ButtonStyle}" 
                     Click="btn_winsettings_Click" 
                     FontWeight="Light"
-                    FontFamily="Nirmala UI" 
+                    FontFamily="{DynamicResource MaterialDesignFont}" 
                     IsDefault="True" 
                     BorderThickness="0"
             />
 
-            <Button Content="Installieren" 
+            <Button Content="System" 
                     Width="150"
                     Background="Transparent"
                     HorizontalAlignment="Left"
@@ -101,8 +101,8 @@
                     x:Name="btn_install"
                     Style="{DynamicResource ButtonStyle}"
                     Click="btn_install_Click"
-                    FontFamily="Nirmala UI"
-                    BorderThickness="0" IsEnabled="False" Visibility="Hidden"
+                    FontFamily="{DynamicResource MaterialDesignFont}"
+                    BorderThickness="0"
             />
 
             <Button Content="Einstellungen" 
@@ -115,7 +115,7 @@
                     x:Name="btn_settings"
                     Style="{DynamicResource ButtonStyle}"
                     Click="btn_settings_Click"
-                    FontFamily="Nirmala UI"
+                    FontFamily="{DynamicResource MaterialDesignFont}"
                     BorderThickness="0" IsEnabled="False" Visibility="Hidden"
             />
 

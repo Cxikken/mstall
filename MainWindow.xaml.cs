@@ -90,7 +90,7 @@ namespace mstall
             btn_install.FontWeight = FontWeights.Normal;
             btn_settings.FontWeight = FontWeights.Bold;
 
-            frame.Navigate(new System.Uri("settings.xaml", UriKind.RelativeOrAbsolute));
+           // frame.Navigate(new System.Uri("settings.xaml", UriKind.RelativeOrAbsolute));
 
         }
 
@@ -141,7 +141,7 @@ namespace mstall
             }
 
 
-            this.Title = "mstall" + " " + "v." + ver;
+            this.Title = "mstall" + " " + "v." + ver + " " + "by Kilian Schuch";
         }
 
         #endregion

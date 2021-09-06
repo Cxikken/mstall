@@ -89,9 +89,6 @@
     <Compile Include="install.xaml.cs">
       <DependentUpon>install.xaml</DependentUpon>
     </Compile>
-    <Compile Include="settings.xaml.cs">
-      <DependentUpon>settings.xaml</DependentUpon>
-    </Compile>
     <Compile Include="winsettings.xaml.cs">
       <DependentUpon>winsettings.xaml</DependentUpon>
     </Compile>
@@ -111,10 +108,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="settings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="winsettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

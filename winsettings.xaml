@@ -25,17 +25,20 @@
                  Width="550" 
                  Background="{DynamicResource MaterialDesignPaper}"
                  x:Name="winsettings_listbox"
-                 Margin="20,10,0,10">
+                 Margin="20,10,0,10"
+                 Style="{DynamicResource MaterialDesignCardsListBox}">
 
-            <ListBoxItem MouseUp="ListBoxItem_explorersettings_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_explorersettings_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="img_explorersettings" Source="/Assets/switch_on.png"
-                           Width="20"/>
+                           Width="20" 
+                           Margin="2,0,0,0"
+                           />
                     <TextBlock x:Name="txb_explorersettings" FontSize="15" Text="   Explorer Einstellungen"/>
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_HideFileExt_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_HideFileExt_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_hidefileext"
@@ -45,7 +48,7 @@
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_Hidden_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_Hidden_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  FontSize="15" Text="         "/>
                     <Image  x:Name="img_hidden"
@@ -55,7 +58,7 @@
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_SharingWizardOn_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_SharingWizardOn_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_sharingwizardon"
@@ -65,7 +68,7 @@
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_NavPanelExpandToCurrentFolder_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_NavPanelExpandToCurrentFolder_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_navpanel"
@@ -75,23 +78,27 @@
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_ad_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_ad_MouseUp" Margin="2,3,3,2">
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="img_ad" Source="/Assets/switch_on.png"
-                           Width="20"/>
+                           Width="20" 
+                           Margin="2,0,0,0"
+                           />
                     <TextBlock x:Name="txb_ad" FontSize="15" Text="   Werbung im Startmenü entfernen"/>
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_effects_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_effects_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="img_effects" Source="/Assets/switch_off.png"
-                           Width="20"/>
+                           Width="20" 
+                           Margin="2,0,0,0"
+                           />
                     <TextBlock x:Name="txb_effects" FontSize="15" Text="   Visuelle Effekte minimieren (empfohlen für langsame Geräte)"/>
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_winminimize_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_winminimize_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_winminimize"
@@ -101,7 +108,7 @@
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_listviewshadow_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_listviewshadow_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_listviewshadow"
@@ -111,7 +118,7 @@
                 </StackPanel>
             </ListBoxItem>
 
-            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp">
+            <ListBoxItem MouseUp="ListBoxItem_dragfullwindows_MouseUp" Margin="2,5,5,2">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="15" Text="         "/>
                     <Image x:Name="img_dragfullwindows"

@@ -34,11 +34,7 @@ C:\Users\Kilian\Source\Repos\mstall\obj\Debug\install.g.cs
 C:\Users\Kilian\Source\Repos\mstall\obj\Debug\settings.g.cs
 C:\Users\Kilian\Source\Repos\mstall\obj\Debug\install.baml
 C:\Users\Kilian\Source\Repos\mstall\obj\Debug\settings.baml
-C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\install.g.cs
-C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\settings.g.cs
 C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\winsettings.g.cs
-C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\install.baml
-C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\settings.baml
 C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\winsettings.baml
 C:\Users\Kilian\source\repos\mstall\bin\Debug\MaterialDesignColors.dll
 C:\Users\Kilian\source\repos\mstall\bin\Debug\MaterialDesignThemes.Wpf.dll
@@ -54,3 +50,5 @@ C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\Material
 C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\App.baml
 C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\mstall.csproj.CopyComplete
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\install.g.cs
+C:\Users\kilia\Documents\002_VisualStudio\Projekte\010_mstall\obj\Debug\install.baml
